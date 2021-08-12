@@ -18,7 +18,7 @@ const ExpenseForm = () => {
     //   ...userInput,
     //   enteredTitle: event.target.value,
     // });
-    // setUserInput((prevState) => {
+    // setUserInput((prevState) => { // preState不能省略，
     //   return { ...prevState, enteredTitle: event.target.value };
     // });
   };
@@ -40,7 +40,7 @@ const ExpenseForm = () => {
   };
 
   const submitHandler = (event) => {
-    event.preventDefault();
+    event.preventDefault(); // prevent page to reload
     
     const expenseData = {
       title: enteredTitle,
